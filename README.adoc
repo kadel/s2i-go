@@ -1,7 +1,7 @@
 [[go-docker-images]]
 = Go Docker images
 
-image:https://travis-ci.org/openshift-s2i/s2i-go.svg?branch=master["Build Status", link="https://travis-ci.org/openshift-s2i/s2i-go"]
+image:https://travis-ci.org/kadel/s2i-go.svg?branch=master["Build Status", link="https://travis-ci.org/kadel/s2i-go"]
 
 This repository contains the source for creating a
 https://github.com/openshift/source-to-image[source-to-image] builder image,
@@ -18,9 +18,12 @@ Documentation].
 
 Go versions currently supported are:
 
-* Go 1.4.3
-* Go 1.5.3
-* Go 1.6
+* 1.4.3
+* 1.5.4
+* 1.6.4
+* 1.7.6
+* 1.8.4
+* 1.9.2
 
 The following operating system base images are supported:
 
@@ -32,7 +35,7 @@ The following operating system base images are supported:
 To build a Go builder image, execute:
 
 -------------------------------------------------------
-$ git clone https://github.com/openshift-s2i/s2i-go.git
+$ git clone https://github.com/kadel/s2i-go.git
 $ cd s2i-go
 $ make build VERSION=1.4
 -------------------------------------------------------
@@ -40,7 +43,7 @@ $ make build VERSION=1.4
 Alternatively, you can pull the CentOS image from Docker Hub via:
 
 --------------------------------------
-$ docker pull openshift/go-14-centos7
+$ docker pull tomaskral/s2i-go-14
 --------------------------------------
 
 *Notice: By omitting the `VERSION` parameter, the build/test action will
@@ -53,8 +56,8 @@ There are several sample Go applications included with this repository.  To
 build a simple Go test application using the standalone
 
 ---------------------------------------------------------------------------------
-$ s2i build https://github.com/openshift-s2i/s2i-go.git \
-    --context-dir=1.4/test/test-app openshift/go-14-centos7 go-test-app
+$ s2i build https://github.com/kadel/s2i-go.git \
+    --context-dir=1.4/test/test-app tomaskral/go-14 go-test-app
 ---------------------------------------------------------------------------------
 
 The resulting image can be executed using https://docker.com[docker]:
@@ -102,14 +105,13 @@ and executed during application source code builds.
 Image name structure
 ~~~~~~~~~~~~~~~~~~~~
 
-[[structure-openshift1-2-3]]
-Structure: openshift/1-2-3
+[[structure-tomaskral1-2-3]]
+Structure: tomaskral/1-2-3
 
 1.  Platform name (lowercase) - go
 2.  Platform version(without dots) - 14
-3.  Base builder image - centos7/rhel7
 
-Examples: `openshift/go-14-centos7`, `openshift/go-14-rhel7`
+Examples: `tomaskral/s2i-go-14`, `tomaskral/s2i-go-14`
 
 [[contributing]]
 Contributing

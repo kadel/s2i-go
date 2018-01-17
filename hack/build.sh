@@ -80,7 +80,7 @@ for dir in ${dirs}; do
       fi
   esac
 
-  IMAGE_NAME="${NAMESPACE}${BASE_IMAGE_NAME}-${dir//./}-${OS}"
+  IMAGE_NAME="${NAMESPACE}${BASE_IMAGE_NAME}-${dir//./}"
 
   if [[ -v TEST_MODE ]]; then
     IMAGE_NAME+="-candidate"
