@@ -25,6 +25,16 @@ Go versions currently supported are:
 * 1.8.4
 * 1.9.2
 
+== Images on Docker Hub
+* https://hub.docker.com/r/tomaskral/s2i-go-110-beta[tomaskral/s2i-go-110-beta]
+* https://hub.docker.com/r/tomaskral/s2i-go-18[tomaskral/s2i-go-18]
+* https://hub.docker.com/r/tomaskral/s2i-go-17[tomaskral/s2i-go-17]
+* https://hub.docker.com/r/tomaskral/s2i-go-19[tomaskral/s2i-go-19]
+* https://hub.docker.com/r/tomaskral/s2i-go-16[tomaskral/s2i-go-16]
+* https://hub.docker.com/r/tomaskral/s2i-go-15[tomaskral/s2i-go-15]
+* https://hub.docker.com/r/tomaskral/s2i-go-14[tomaskral/s2i-go-14]
+
+
 The following operating system base images are supported:
 
 * CentOS 7
